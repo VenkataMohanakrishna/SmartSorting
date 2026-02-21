@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Smart Sorting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <style>
+        .portfolio {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .portfolio h1 {
+            margin-bottom: 20px;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .sidebar {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 10px;
+        }
+
+        .sidebar ul li strong {
+            display: block;
+            color: var(--dark);
+        }
+
+        .sidebar ul li span {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/" class="logo"><i class="fa-solid fa-seedling"></i> Smart Sorting</a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/portfolio-details.html" class="active">Portfolio</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="portfolio">
+        <h1>Project Details</h1>
+        <p style="font-size: 1.1rem; color: var(--gray);">Deep Learning Architecture for Agricultural Quality Control.
+        </p>
+
+        <div class="details-grid">
+            <div class="sidebar">
+                <h3>Project Information</h3>
+                <br>
+                <ul>
+                    <li><strong>Category</strong> <span>Deep Learning / Computer Vision</span></li>
+                    <li><strong>Platform</strong> <span>Web Application (Flask)</span></li>
+                    <li><strong>Architecture</strong> <span>MobileNetV2 (Transfer Learning)</span></li>
+                    <li><strong>Status</strong> <span>Active</span></li>
+                </ul>
+            </div>
+            <div class="main-details">
+                <h2>About the Project</h2>
+                <p style="margin-top: 15px; line-height: 1.8; color: var(--dark);">
+                    This project tackles the problem of automated fruit and vegetable sorting by identifying healthy and
+                    rotten produce. Using a Convolutional Neural Network built on MobileNetV2 with pre-trained ImageNet
+                    weights, the system accurately classifies input images.
+                </p>
+                <p style="margin-top: 15px; line-height: 1.8; color: var(--dark);">
+                    The backend is operated securely using Flask, while the frontend gives a rich and premium user
+                    experience featuring drag-and-drop mechanics and smooth animated confidence progress bars.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

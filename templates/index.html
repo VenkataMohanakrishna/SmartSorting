@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Sorting | Fruits & Vegetables</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo">
+            <i class="fa-solid fa-seedling"></i> Smart Sorting
+        </a>
+        <nav>
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="/portfolio-details.html">Portfolio</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Identify Healthy vs Rotten Produce</h1>
+        <p>Using advanced Deep Learning (MobileNetV2), instantly classify whether your fruits and vegetables are fresh or spoiled.</p>
+    </section>
+
+    <div class="container">
+        <!-- Upload Section -->
+        <div class="upload-card">
+            <h2>Upload Image</h2>
+            <p style="color: var(--gray); margin-bottom: 25px;">Select an image of a single fruit or vegetable.</p>
+            
+            <div class="upload-area" id="upload-area">
+                <i class="fa-solid fa-cloud-arrow-up upload-icon"></i>
+                <p class="upload-text">Drag & Drop or <strong>Click here</strong> to upload</p>
+                <input type="file" id="file-input" accept="image/png, image/jpeg, image/webp" />
+            </div>
+
+            <button class="btn" id="analyze-btn" disabled>Analyze Image</button>
+            <div class="loader" id="loader"></div>
+        </div>
+
+        <!-- Result Section -->
+        <div class="result-card" id="result-card">
+            <div class="result-image-wrapper">
+                <img id="result-img" src="" alt="Analyzed Produce">
+            </div>
+            <h3>Prediction Result</h3>
+            <div class="prediction-label" id="prediction-label">Results</div>
+            
+            <div class="confidence-bar-container">
+                <div class="confidence-bar" id="confidence-bar"></div>
+            </div>
+            <p class="confidence-text" id="confidence-text">Confidence: 0%</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+</body>
+</html>

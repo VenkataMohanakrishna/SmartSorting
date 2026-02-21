@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Single Post | Smart Sorting</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+    <style>
+        .article-content {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .article-content h1 {
+            margin-bottom: 10px;
+        }
+
+        .meta {
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-bottom: 1px solid var(--light);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+
+        .article-content p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="/" class="logo"><i class="fa-solid fa-seedling"></i> Smart Sorting</a>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/portfolio-details.html">Portfolio</a></li>
+                <li><a href="/blog.html" class="active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="article-content">
+        <h1>How MobileNetV2 is Revolutionizing Crop Sorting</h1>
+        <div class="meta">Published on Sept 14 | By AI Team</div>
+        <p>In recent years, the intersection of agriculture and artificial intelligence has grown tighter. Transfer
+            learning plays a huge role here by drastically reducing the data and compute requirements needed to train
+            robust vision models.</p>
+        <p>By leveraging MobileNetV2, an architecture designed for mobile and resource-constrained environments, this
+            project aims to predict the health of fruits and vegetables in milliseconds, ensuring only the best produce
+            makes it to market.</p>
+        <a href="/blog.html" style="color: var(--primary); font-weight: 600; text-decoration: none;">&larr; Back to
+            Blog</a>
+    </article>
+</body>
+
+</html>
